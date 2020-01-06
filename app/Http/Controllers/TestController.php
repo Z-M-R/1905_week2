@@ -45,12 +45,12 @@ class TestController extends Controller
             'return_url'=>  $return_url,
             'biz_content'=> json_encode($request_param)
         ];
-       
+
         // echo '<pre>';print_r($param);echo '</pre>';
 
         // // 字典序排序
         ksort($param);
-        
+
         // // 2 拼接 key1=value1&key2=value2...
         $str = "";
         foreach($param as $k=>$v)
@@ -147,8 +147,6 @@ class TestController extends Controller
     //考试解密
     public function dec2()
     {
-        // $ = 'khoor';
-        
         $enc = $_GET['str'];
 
         echo "密文：" . $enc;echo '<hr>';
