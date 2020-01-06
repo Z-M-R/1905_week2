@@ -24,6 +24,8 @@ Route::get('/test/pay','TestController@alipay');    // 沙箱支付测试
 
 Route::get('/test/ascii','TestController@ascii');    // 加密
 Route::get('/test/dec','TestController@dec');    // 解密
+Route::get('/test/dec2','TestController@dec2');    // 解密2
+Route::get('/test/caesar','TestController@caesar');    // 加密
 
 
 Route::get('/test/alipay/return','Alipay\PayController@aliReturn');

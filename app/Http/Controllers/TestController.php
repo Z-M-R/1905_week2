@@ -122,4 +122,45 @@ class TestController extends Controller
         echo "解密：" . $str;
 
     }
+
+    //加密
+    public function caesar()
+    {
+        $char = "hello word";
+        $length = strlen($char);
+        echo $length;echo '</br>';
+
+        $pass = "";
+        for($i=0;$i<$length;$i++)
+        {
+            echo $char[$i] . '>>>' . ord($char[$i]);echo '</br>';
+            $ord = ord($char[$i]) + 3;
+            $chr = chr($ord);
+            echo $char[$i] . '>>>' . $ord . '>>>' . $chr;echo '<hr>';
+            $pass .= $chr;
+        }
+
+        echo '</br>';
+        echo $pass;
+    }
+
+    public function dec2()
+    {
+        $enc = 'khoor#zrug';
+        echo "密文：" . $enc;echo '<hr>';
+        $length = strlen($enc);
+
+
+        $str = "";
+        for($i=0;$i<$length;$i++)
+        {
+            $ord = ord($enc[$i]) - 3;
+            $chr = chr($ord);
+            echo $ord . '>>>' . $chr;echo '</br>';
+            $str .= $chr;
+        }
+
+        echo "解密：" . $str;
+    }
+
 }
