@@ -123,10 +123,10 @@ class TestController extends Controller
 
     }
 
-    //加密
+    //考试加密
     public function caesar()
     {
-        $char = "hello word";
+        $char = $_GET['str'];
         $length = strlen($char);
         echo $length;echo '</br>';
 
@@ -144,9 +144,13 @@ class TestController extends Controller
         echo $pass;
     }
 
+    //考试解密
     public function dec2()
     {
-        $enc = 'khoor#zrug';
+        // $ = 'khoor';
+        
+        $enc = $_GET['str'];
+
         echo "密文：" . $enc;echo '<hr>';
         $length = strlen($enc);
 
